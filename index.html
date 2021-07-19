@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guesser Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="gameContainer">
+        <header>
+            <h1>Number Guesser Game</h1>
+        </header>
+
+        <div class="headText">
+            <p class="subTitleLabel1">Round <span id="roundNum">1</span></p>
+            <p class="guessLabel">Target Number: <span id="target-number">?</span></p>
+        </div>
+
+        <div class="guessing-area">
+            <div class="guess computersGuess">
+                <div class="guessTitle">
+                    <p class="guessLabel">Computer</p>
+                    <p class="scoreLabel">Score: <span id="computerScore">0</span></p>
+                </div>
+                <p id="computersGuess">?</p>
+                <p class="winnerText" id="computer-wins"></p>
+            </div>
+            <div class="guess humansGuess">
+                <div class="guessTitle">
+                    <p class="guessLabel">You</p>
+                    <p class="scoreLabel">Score: <span id="human-score">0</span></p>
+                </div>
+                <input type="number" id="humansGuess" min=0 max=9 value=0>
+                <div class="numberSelector">
+                    <button class="numberSelectorDown" id="subtract" disabled>-</button>
+                    <button class="numberSelectorUp" id="add">+</button>
+                </div>
+                <button class="button" id="guess">Make your Guess</button>
+            </div>
+        </div>
+
+        <div class="nextRoundContainer">
+            <button class="button" id="next-round" disabled>Next Round</button>
+        </div>
+
+    </div>
+
+    <div class="guidelines">
+        <div class="guideline">
+            <h3>Step 1</h3>
+            <p>Input a number between 0 and 9</p>
+        </div>
+        <div class="guideline">
+            <h3>Step 2</h3>
+            <p>Click "Make a Guess" to submit your guess and see who won the round.</p>
+        </div>
+        <div class="guideline">
+            <h3>Step 3</h3>
+            <p>Click "Next Round" to play again.</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
